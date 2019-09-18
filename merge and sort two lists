@@ -1,0 +1,32 @@
+import re
+
+def mergeAndSort(n,z):
+    list1 = []
+    list2 = []
+    finalList = []
+    for i in range(n+1):
+       list1num = int(input("Enter the number for list1:"))
+       list1.append(list1num)
+    for i in range(z+1):
+        list2num = int(input("Enter the number for list2:"))
+        list2.append(list2num)
+    list3 = list1+list2
+    for i in list3:
+        x = re.search("ValueError",list3.index(i))
+        if x == 0:
+            finalList.append(i)
+    return finalList
+
+print(mergeAndSort(3,3))
+
+
+
+
+
+
+
+
+
+#a = [[1,2,3],[4,4,6],[7,8,9]]
+ #   b = [x**2 for xs in a for x in xs]
+  #  print (b)
